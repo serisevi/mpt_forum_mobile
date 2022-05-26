@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Threads"
+    android:id="@+id/activityThreads">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editThreadsSearch"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:hint="Название или описание"
+        android:textColorHint="#808080"
+        android:textAlignment="textStart"
+        android:layout_marginTop="40sp"
+        app:layout_constraintStart_toStartOf="@id/threads_recycler"
+        app:layout_constraintEnd_toStartOf="@id/btnThreadsSearch"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnThreadsSearch"
+        android:layout_width="83sp"
+        android:layout_height="0sp"
+        android:text="Поиск"
+        android:textSize="10sp"
+        android:textAlignment="center"
+        android:backgroundTint="#9688FF"
+        app:cornerRadius="0sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/threads_recycler"
+        app:layout_constraintTop_toTopOf="@id/editThreadsSearch"
+        app:layout_constraintBottom_toBottomOf="@id/editThreadsSearch"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerThreadsPageMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editThreadsSearch">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnThreadsPagesFirst"
+            android:layout_width="0sp"
+            android:layout_height="35sp"
+            android:text="&lt;&lt;"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:backgroundTint="#9688FF"
+            app:cornerRadius="0sp"
+            android:textColor="@color/white"
+            android:paddingTop="-5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnThreadsPagesPrevious"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnThreadsPagesPrevious"
+            android:layout_width="0sp"
+            android:layout_height="35sp"
+            android:text="&lt;"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:backgroundTint="#9688FF"
+            app:cornerRadius="0sp"
+            android:textColor="@color/white"
+            android:paddingTop="-5sp"
+            app:layout_constraintStart_toEndOf="@id/btnThreadsPagesFirst"
+            app:layout_constraintEnd_toStartOf="@id/btnThreadsPagesCurrent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnThreadsPagesCurrent"
+            android:layout_width="0sp"
+            android:layout_height="35sp"
+            android:text="x/x"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:backgroundTint="#9688FF"
+            app:cornerRadius="0sp"
+            android:textColor="@color/white"
+            android:paddingTop="-5sp"
+            app:layout_constraintStart_toEndOf="@id/btnThreadsPagesPrevious"
+            app:layout_constraintEnd_toStartOf="@id/btnThreadsPagesNext"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnThreadsPagesNext"
+            android:layout_width="0sp"
+            android:layout_height="35sp"
+            android:text="&gt;"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:backgroundTint="#9688FF"
+            app:cornerRadius="0sp"
+            android:textColor="@color/white"
+            android:paddingTop="-5sp"
+            app:layout_constraintEnd_toStartOf="@id/btnThreadsPagesLast"
+            app:layout_constraintStart_toEndOf="@id/btnThreadsPagesCurrent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnThreadsPagesLast"
+            android:layout_width="0sp"
+            android:layout_height="35sp"
+            android:text="&gt;&gt;"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:backgroundTint="#9688FF"
+            app:cornerRadius="0sp"
+            android:textColor="@color/white"
+            android:paddingTop="-5sp"
+            app:layout_constraintStart_toEndOf="@id/btnThreadsPagesNext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/threads_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_marginBottom="5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerThreadsPageMenu"
+        app:layout_constraintBottom_toTopOf="@+id/menuThreads"/>
+
+    <ImageView
+        android:layout_width="20sp"
+        android:layout_height="20sp"
+        android:elevation="3sp"
+        android:src="@drawable/white_cross"
+        app:layout_constraintTop_toTopOf="@+id/btnThreadsCancel"
+        app:layout_constraintBottom_toBottomOf="@id/btnThreadsCancel"
+        app:layout_constraintStart_toStartOf="@+id/btnThreadsCancel"
+        app:layout_constraintEnd_toEndOf="@+id/btnThreadsCancel"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnThreadsCancel"
+        android:layout_width="43sp"
+        android:layout_height="55sp"
+        app:cornerRadius="90sp"
+        android:backgroundTint="#9688FF"
+        android:layout_marginStart="15sp"
+        android:layout_marginEnd="5sp"
+        android:layout_marginBottom="3sp"
+        app:layout_constraintTop_toTopOf="@id/menuThreads"
+        app:layout_constraintBottom_toBottomOf="@id/menuThreads"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/menuThreads"/>
+
+    <ImageView
+        android:layout_width="20sp"
+        android:layout_height="20sp"
+        android:elevation="3sp"
+        android:src="@drawable/plus"
+        app:layout_constraintTop_toTopOf="@+id/btnThreadsAdd"
+        app:layout_constraintBottom_toBottomOf="@id/btnThreadsAdd"
+        app:layout_constraintStart_toStartOf="@+id/btnThreadsAdd"
+        app:layout_constraintEnd_toEndOf="@+id/btnThreadsAdd"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnThreadsAdd"
+        android:layout_width="43sp"
+        android:layout_height="55sp"
+        app:cornerRadius="90sp"
+        android:backgroundTint="#9688FF"
+        android:layout_marginStart="5sp"
+        android:layout_marginEnd="15sp"
+        android:layout_marginBottom="3sp"
+        app:layout_constraintTop_toTopOf="@id/menuThreads"
+        app:layout_constraintBottom_toBottomOf="@id/menuThreads"
+        app:layout_constraintStart_toEndOf="@id/menuThreads"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/menuThreads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        android:layout_marginBottom="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/ivMenuThreads"
+            android:layout_width="0sp"
+            android:layout_height="25sp"
+            android:src="@drawable/threads_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivMenuAccount"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivMenuAccount"
+            android:layout_width="0sp"
+            android:layout_height="25sp"
+            android:src="@drawable/account_black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivMenuThreads"
+            app:layout_constraintEnd_toStartOf="@id/ivMenuSettings"/>
+
+        <ImageView
+            android:id="@+id/ivMenuSettings"
+            android:layout_width="0sp"
+            android:layout_height="25sp"
+            android:src="@drawable/gear_black"
+            app:layout_constraintStart_toEndOf="@id/ivMenuAccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvMenuThreads"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Обсуждения"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@id/ivMenuThreads"
+            app:layout_constraintTop_toBottomOf="@id/ivMenuThreads"
+            app:layout_constraintEnd_toEndOf="@id/ivMenuThreads"/>
+
+        <TextView
+            android:id="@+id/tvMenuAccount"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Аккаунт"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/ivMenuAccount"
+            app:layout_constraintStart_toStartOf="@id/ivMenuAccount"
+            app:layout_constraintEnd_toEndOf="@id/ivMenuAccount"/>
+
+        <TextView
+            android:id="@+id/tvMenuSettings"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Настройки"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@id/ivMenuSettings"
+            app:layout_constraintEnd_toEndOf="@id/ivMenuSettings"
+            app:layout_constraintTop_toBottomOf="@id/ivMenuSettings"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

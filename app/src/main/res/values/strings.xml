@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Forum MPT</string>
+    <string name="app_version">beta 0.1</string>
+    <string name="okhttp_version">3.10.0</string>
+    <string name="jsoup_version">1.13.1</string>
+    <string name="glide_version">4.13.2</string>
+    <string name="gson_version">2.8.6</string>
+    <string name="site">http://192.168.1.4:9090</string>
+    <string-array name="courses">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="messages_actions">
+        <item>Ответить</item>
+        <item>Удалить</item>
+        <item>Заблокировать в обсуждении</item>
+        <item>Разблокировать в обсуждении</item>
+        <item>Заблокировать на форуме</item>
+        <item>Разблокировать на форуме</item>
+    </string-array>
+    <string-array name="theme_modes">
+        <item>Светлая</item>
+        <item>Тёмная</item>
+        <item>Системная</item>
+    </string-array>
+    <string-array name="accent_colors">
+        <item>#BB86FC</item>
+        <item>#DDA0DD</item>
+        <item>#F04560</item>
+        <item>#00E0FF</item>
+        <item>#98FF98</item>
+        <item>#8ED261</item>
+        <item>#30A89C</item>
+        <item>#207068</item>
+        <item>#00e100</item>
+        <item>#EEE000</item>
+    </string-array>
+    <string-array name="accent_colors_names">
+        <item>Светло-фиолетовый</item>
+        <item>Бледно-розовый</item>
+        <item>Фуксия</item>
+        <item>Голубой</item>
+        <item>Мятный</item>
+        <item>Фисташковый</item>
+        <item>Тёмно-бирюзовый</item>
+        <item>Тёмно-зелёный</item>
+        <item>Лаймовый</item>
+        <item>Жёлтый</item>
+    </string-array>
+</resources>

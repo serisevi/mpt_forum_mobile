@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.forummpt">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ForumMPT"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Notifications"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Settings"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Account"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Messages"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Threads"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegistrationCodeRedeem"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RestorationCodeRedeem"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Restoration"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Registration"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Authorization"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

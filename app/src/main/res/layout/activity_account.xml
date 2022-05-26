@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Account"
+    android:id="@+id/activityAccount">
+
+    <LinearLayout
+        android:id="@+id/containerAccountTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25sp"
+        android:layout_marginEnd="25sp"
+        android:layout_marginTop="40sp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="1"
+            android:columnCount="2">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivAccountAvatar"
+                android:layout_width="115sp"
+                android:layout_height="115sp"
+                android:src="@drawable/mpt_logo"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/RoundImage"/>
+
+            <LinearLayout
+                android:id="@+id/containerAccountInfoPreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvAccountPreviewUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvAccountPreviewName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvAccountPreviewEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvAccountPreviewSpec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvAccountPreviewCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/containerStats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:layout_marginStart="25sp"
+        android:layout_marginEnd="25sp"
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerAccountTop">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_gravity="center|fill_horizontal"
+            android:layout_height="wrap_content"
+            android:text="О себе"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_columnSpan="2"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAccountPreviewDesc"
+            android:layout_gravity="center|fill_horizontal"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_columnSpan="2"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_gravity="center|fill_horizontal"
+            android:layout_height="wrap_content"
+            android:text="Статистика"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_columnSpan="2"
+            android:layout_marginTop="10sp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_gravity="center|fill_horizontal"
+            android:layout_height="wrap_content"
+            android:text="Всего сообщений:"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvStatMessagesTotal"
+            android:layout_gravity="right"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_gravity="center|fill_horizontal"
+            android:layout_height="wrap_content"
+            android:text="Сообщений в этом месяце:"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvStatMessagesMonthly"
+            android:layout_gravity="right"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_gravity="center|fill_horizontal"
+            android:layout_height="wrap_content"
+            android:text="Создано обсуждений:"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvStatThreadsCreatedTotal"
+            android:layout_gravity="right"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_gravity="center|fill_horizontal"
+            android:layout_height="wrap_content"
+            android:text="Создано обсуждений в этом месяце:"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvStatThreadsCreatedMonthly"
+            android:layout_gravity="right"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_gravity="center|fill_horizontal"
+            android:layout_height="wrap_content"
+            android:text="Дата регистрации:"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvStatRegDate"
+            android:layout_gravity="right"
+            android:layout_height="wrap_content"/>
+
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25sp"
+        android:layout_marginEnd="25sp"
+        android:layout_marginBottom="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/menuAccount"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAccountChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#BB86FC"
+            android:text="Сменить пароль"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="15sp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAccountEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#BB86FC"
+            android:text="Изменить личные данные"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="15sp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAccountNotifications"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:text="Уведомления"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#BB86FC"
+                app:shapeAppearance="@style/ButtonCut_Left"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnAccountExit"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAccountExit"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:text="Выйти"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#BB86FC"
+                app:shapeAppearance="@style/ButtonCut_Right"
+                app:layout_constraintStart_toEndOf="@id/btnAccountNotifications"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/menuAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        android:layout_marginBottom="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/ivMenuThreads"
+            android:layout_width="0sp"
+            android:layout_height="25sp"
+            android:src="@drawable/threads_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivMenuAccount"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivMenuAccount"
+            android:layout_width="0sp"
+            android:layout_height="25sp"
+            android:src="@drawable/account_black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivMenuThreads"
+            app:layout_constraintEnd_toStartOf="@id/ivMenuSettings"/>
+
+        <ImageView
+            android:id="@+id/ivMenuSettings"
+            android:layout_width="0sp"
+            android:layout_height="25sp"
+            android:src="@drawable/gear_black"
+            app:layout_constraintStart_toEndOf="@id/ivMenuAccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvMenuThreads"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Обсуждения"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@id/ivMenuThreads"
+            app:layout_constraintTop_toBottomOf="@id/ivMenuThreads"
+            app:layout_constraintEnd_toEndOf="@id/ivMenuThreads"/>
+
+        <TextView
+            android:id="@+id/tvMenuAccount"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Аккаунт"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/ivMenuAccount"
+            app:layout_constraintStart_toStartOf="@id/ivMenuAccount"
+            app:layout_constraintEnd_toEndOf="@id/ivMenuAccount"/>
+
+        <TextView
+            android:id="@+id/tvMenuSettings"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Настройки"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@id/ivMenuSettings"
+            app:layout_constraintEnd_toEndOf="@id/ivMenuSettings"
+            app:layout_constraintTop_toBottomOf="@id/ivMenuSettings"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

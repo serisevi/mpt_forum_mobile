@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Messages"
+    android:id="@+id/activityMessages">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editMessagesSearch"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:hint="Текст или никнейм"
+        android:textColorHint="#808080"
+        android:textAlignment="textStart"
+        android:layout_marginTop="40sp"
+        app:layout_constraintStart_toStartOf="@id/messages_recycler"
+        app:layout_constraintEnd_toStartOf="@id/btnMessagesSearch"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMessagesSearch"
+        android:layout_width="83sp"
+        android:layout_height="0sp"
+        android:text="Поиск"
+        android:textSize="10sp"
+        android:textAlignment="center"
+        android:backgroundTint="#9688FF"
+        app:cornerRadius="0sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/messages_recycler"
+        app:layout_constraintTop_toTopOf="@id/editMessagesSearch"
+        app:layout_constraintBottom_toBottomOf="@id/editMessagesSearch"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerMessagesPageMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editMessagesSearch">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMessagesPagesFirst"
+            android:layout_width="0sp"
+            android:layout_height="35sp"
+            android:text="&lt;&lt;"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:backgroundTint="#9688FF"
+            app:cornerRadius="0sp"
+            android:textColor="@color/white"
+            android:paddingTop="-5sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnMessagesPagesPrevious"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMessagesPagesPrevious"
+            android:layout_width="0sp"
+            android:layout_height="35sp"
+            android:text="&lt;"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:backgroundTint="#9688FF"
+            app:cornerRadius="0sp"
+            android:textColor="@color/white"
+            android:paddingTop="-5sp"
+            app:layout_constraintStart_toEndOf="@id/btnMessagesPagesFirst"
+            app:layout_constraintEnd_toStartOf="@id/btnMessagesPagesCurrent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMessagesPagesCurrent"
+            android:layout_width="0sp"
+            android:layout_height="35sp"
+            android:text="x/x"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:backgroundTint="#9688FF"
+            app:cornerRadius="0sp"
+            android:textColor="@color/white"
+            android:paddingTop="-5sp"
+            app:layout_constraintStart_toEndOf="@id/btnMessagesPagesPrevious"
+            app:layout_constraintEnd_toStartOf="@id/btnMessagesPagesNext"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMessagesPagesNext"
+            android:layout_width="0sp"
+            android:layout_height="35sp"
+            android:text="&gt;"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:backgroundTint="#9688FF"
+            app:cornerRadius="0sp"
+            android:textColor="@color/white"
+            android:paddingTop="-5sp"
+            app:layout_constraintEnd_toStartOf="@id/btnMessagesPagesLast"
+            app:layout_constraintStart_toEndOf="@id/btnMessagesPagesCurrent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMessagesPagesLast"
+            android:layout_width="0sp"
+            android:layout_height="35sp"
+            android:text="&gt;&gt;"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:backgroundTint="#9688FF"
+            app:cornerRadius="0sp"
+            android:textColor="@color/white"
+            android:paddingTop="-5sp"
+            app:layout_constraintStart_toEndOf="@id/btnMessagesPagesNext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messages_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_marginBottom="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerMessagesPageMenu"
+        app:layout_constraintBottom_toTopOf="@+id/menuMessages"/>
+
+    <ImageView
+        android:layout_width="20sp"
+        android:layout_height="20sp"
+        android:elevation="3sp"
+        android:src="@drawable/white_cross"
+        app:layout_constraintTop_toTopOf="@+id/btnMessagesCancel"
+        app:layout_constraintBottom_toBottomOf="@id/btnMessagesCancel"
+        app:layout_constraintStart_toStartOf="@+id/btnMessagesCancel"
+        app:layout_constraintEnd_toEndOf="@+id/btnMessagesCancel"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMessagesCancel"
+        android:layout_width="43sp"
+        android:layout_height="55sp"
+        app:cornerRadius="90sp"
+        android:backgroundTint="#9688FF"
+        android:layout_marginStart="15sp"
+        android:layout_marginEnd="5sp"
+        android:layout_marginBottom="3sp"
+        app:layout_constraintTop_toTopOf="@id/menuMessages"
+        app:layout_constraintBottom_toBottomOf="@id/menuMessages"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/menuMessages"/>
+
+    <ImageView
+        android:layout_width="20sp"
+        android:layout_height="20sp"
+        android:elevation="3sp"
+        android:src="@drawable/plus"
+        app:layout_constraintTop_toTopOf="@+id/btnMessagesAdd"
+        app:layout_constraintBottom_toBottomOf="@id/btnMessagesAdd"
+        app:layout_constraintStart_toStartOf="@+id/btnMessagesAdd"
+        app:layout_constraintEnd_toEndOf="@+id/btnMessagesAdd"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMessagesAdd"
+        android:layout_width="43sp"
+        android:layout_height="55sp"
+        app:cornerRadius="90sp"
+        android:backgroundTint="#9688FF"
+        android:layout_marginStart="5sp"
+        android:layout_marginEnd="15sp"
+        android:layout_marginBottom="3sp"
+        app:layout_constraintTop_toTopOf="@id/menuMessages"
+        app:layout_constraintBottom_toBottomOf="@id/menuMessages"
+        app:layout_constraintStart_toEndOf="@id/menuMessages"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/menuMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        android:layout_marginBottom="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/ivMenuThreads"
+            android:layout_width="0sp"
+            android:layout_height="25sp"
+            android:src="@drawable/threads_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivMenuAccount"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivMenuAccount"
+            android:layout_width="0sp"
+            android:layout_height="25sp"
+            android:src="@drawable/account_black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivMenuThreads"
+            app:layout_constraintEnd_toStartOf="@id/ivMenuSettings"/>
+
+        <ImageView
+            android:id="@+id/ivMenuSettings"
+            android:layout_width="0sp"
+            android:layout_height="25sp"
+            android:src="@drawable/gear_black"
+            app:layout_constraintStart_toEndOf="@id/ivMenuAccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvMenuThreads"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Обсуждения"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@id/ivMenuThreads"
+            app:layout_constraintTop_toBottomOf="@id/ivMenuThreads"
+            app:layout_constraintEnd_toEndOf="@id/ivMenuThreads"/>
+
+        <TextView
+            android:id="@+id/tvMenuAccount"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Аккаунт"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/ivMenuAccount"
+            app:layout_constraintStart_toStartOf="@id/ivMenuAccount"
+            app:layout_constraintEnd_toEndOf="@id/ivMenuAccount"/>
+
+        <TextView
+            android:id="@+id/tvMenuSettings"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Настройки"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@id/ivMenuSettings"
+            app:layout_constraintEnd_toEndOf="@id/ivMenuSettings"
+            app:layout_constraintTop_toBottomOf="@id/ivMenuSettings"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+</androidx.constraintlayout.widget.ConstraintLayout>

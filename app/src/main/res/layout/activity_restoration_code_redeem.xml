@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RestorationCodeRedeem"
+    android:id="@+id/activityRestorationCodeRedeem">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerRestCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvRestCodeMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Код был отправлен на указанный вами адрес электронной почты."
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:layout_marginStart="50sp"
+            android:layout_marginEnd="50sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/editRestCode"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editRestCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Код восстановления"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:layout_marginStart="50sp"
+            android:layout_marginEnd="50sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRestCodeMsg"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editRestPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Новый пароль"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:layout_marginStart="50sp"
+            android:layout_marginEnd="50sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editRestCode"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRestOk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#9688FF"
+        android:text="Подтвердить"
+        android:textColor="@color/white"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        android:layout_marginBottom="20sp"
+        app:cornerRadius="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

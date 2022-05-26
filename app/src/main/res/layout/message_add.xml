@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/message_add">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/message_add_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_marginStart="5sp"
+        android:layout_marginEnd="5sp"
+        android:hint="Текст"
+        android:textColorHint="#808080"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/message_add_attach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Прикрепить фото"
+        app:cornerRadius="15sp"
+        android:layout_marginStart="5sp"
+        android:layout_marginEnd="5sp"
+        android:textColor="@color/white"
+        android:backgroundTint="#9688FF"/>
+
+</LinearLayout>

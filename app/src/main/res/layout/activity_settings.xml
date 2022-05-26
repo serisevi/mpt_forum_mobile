@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings"
+    android:id="@+id/activitySettings">
+
+    <LinearLayout
+        android:id="@+id/containerAccountTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25sp"
+        android:layout_marginEnd="25sp"
+        android:layout_marginTop="40sp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Настройки"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:layout_marginTop="5sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Тема интерфейса:"
+                android:textSize="16sp"/>
+
+            <Spinner
+                android:id="@+id/cmbSettingsTheme"
+                android:textAlignment="textEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0000"
+                android:entries="@array/theme_modes" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Акцентный цвет:"
+                android:textSize="16sp"/>
+
+            <Spinner
+                android:id="@+id/cmbSettingsAccent"
+                android:textAlignment="textEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0000"
+                android:entries="@array/accent_colors_names"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="О приложении"
+            android:layout_marginTop="10sp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textAlignment="center"/>
+
+        <GridLayout
+            android:layout_marginTop="5sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_gravity="center|fill_horizontal"
+                android:text="Версия приложения:"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_gravity="right"
+                android:text="@string/app_version"
+                android:textSize="16sp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_gravity="center|fill_horizontal"
+                android:text="Версия библиотеки okhttp:"
+                android:textSize="16sp"
+                android:layout_marginTop="5sp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_gravity="right"
+                android:text="@string/okhttp_version"
+                android:textSize="16sp"
+                android:layout_marginTop="5sp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_gravity="center|fill_horizontal"
+                android:text="Версия библиотеки jsoup:"
+                android:textSize="16sp"
+                android:layout_marginTop="5sp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_gravity="right"
+                android:text="@string/jsoup_version"
+                android:textSize="16sp"
+                android:layout_marginTop="5sp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_gravity="center|fill_horizontal"
+                android:text="Версия библиотеки glide:"
+                android:textSize="16sp"
+                android:layout_marginTop="5sp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_gravity="right"
+                android:text="@string/glide_version"
+                android:textSize="16sp"
+                android:layout_marginTop="5sp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_gravity="center|fill_horizontal"
+                android:text="Версия библиотеки gson:"
+                android:textSize="16sp"
+                android:layout_marginTop="5sp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_gravity="right"
+                android:text="@string/gson_version"
+                android:textSize="16sp"
+                android:layout_marginTop="5sp"/>
+            
+        </GridLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/menuAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        android:layout_marginBottom="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/ivMenuThreads"
+            android:layout_width="0sp"
+            android:layout_height="25sp"
+            android:src="@drawable/threads_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivMenuAccount"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivMenuAccount"
+            android:layout_width="0sp"
+            android:layout_height="25sp"
+            android:src="@drawable/account_black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivMenuThreads"
+            app:layout_constraintEnd_toStartOf="@id/ivMenuSettings"/>
+
+        <ImageView
+            android:id="@+id/ivMenuSettings"
+            android:layout_width="0sp"
+            android:layout_height="25sp"
+            android:src="@drawable/gear_black"
+            app:layout_constraintStart_toEndOf="@id/ivMenuAccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvMenuThreads"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Обсуждения"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@id/ivMenuThreads"
+            app:layout_constraintTop_toBottomOf="@id/ivMenuThreads"
+            app:layout_constraintEnd_toEndOf="@id/ivMenuThreads"/>
+
+        <TextView
+            android:id="@+id/tvMenuAccount"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Аккаунт"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/ivMenuAccount"
+            app:layout_constraintStart_toStartOf="@id/ivMenuAccount"
+            app:layout_constraintEnd_toEndOf="@id/ivMenuAccount"/>
+
+        <TextView
+            android:id="@+id/tvMenuSettings"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Настройки"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@id/ivMenuSettings"
+            app:layout_constraintEnd_toEndOf="@id/ivMenuSettings"
+            app:layout_constraintTop_toBottomOf="@id/ivMenuSettings"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration"
+    android:id="@+id/activityRegistration">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRegHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Регистрация"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:layout_marginTop="35sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRegCat1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Данные авторизации"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:layout_marginTop="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegHeader"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editRegLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Логин"
+        android:textSize="14sp"
+        android:layout_marginTop="2sp"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegCat1"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editRegEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Адрес электронной почты"
+        android:textSize="14sp"
+        android:layout_marginTop="2sp"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editRegLogin"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editRegPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Пароль"
+        android:textSize="14sp"
+        android:layout_marginTop="2sp"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editRegEmail"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRegCat2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Персональные данные"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:layout_marginTop="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editRegPassword"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editRegLastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Фамилия"
+        android:textSize="14sp"
+        android:layout_marginTop="2sp"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegCat2"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editRegFirstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Имя"
+        android:textSize="14sp"
+        android:layout_marginTop="2sp"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editRegMiddlename"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editRegMiddlename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Отчество"
+        android:textSize="14sp"
+        android:layout_marginTop="2sp"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editRegLastname"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editRegDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" О себе"
+        android:textSize="14sp"
+        android:lines="5"
+        android:maxLines="5"
+        android:layout_marginTop="2sp"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editRegFirstname"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRegCourse"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:minWidth="75sp"
+        android:text="Курс"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:layout_marginStart="50sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editRegDesc"/>
+
+    <Spinner
+        android:id="@+id/cmbRegCourse"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:background="#0000"
+        android:entries="@array/courses"
+        android:textAlignment="center"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="1sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegCourse"
+        app:layout_constraintEnd_toEndOf="@+id/tvRegCourse"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRegSpec"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50sp"
+        android:text="Специальность"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:layout_marginStart="1sp"
+        app:layout_constraintStart_toEndOf="@+id/tvRegCourse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editRegDesc"/>
+
+    <Spinner
+        android:id="@+id/cmbRegSpec"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50sp"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:background="#0000"
+        app:layout_constraintStart_toEndOf="@+id/cmbRegCourse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegSpec"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegAttech"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#9688FF"
+        android:text="Выбрать аватар"
+        android:textColor="@color/white"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        android:layout_marginBottom="0sp"
+        app:cornerRadius="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnRegOk"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegOk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#9688FF"
+        android:text="Зарегистрироваться"
+        android:textColor="@color/white"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        android:layout_marginBottom="20sp"
+        app:cornerRadius="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
